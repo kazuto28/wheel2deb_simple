@@ -58,9 +58,6 @@ def suggest_name(ctx, wheel_name):
 
     prefix = {2: "python", 3: "python3"}[ctx.python_version.major]
 
-    if wheel_name in ctx.map:
-        return prefix + "-" + ctx.map[wheel_name]
-
     basename = re.compile("[^A-Za-z0-9.]+").sub("-", wheel_name)
     basename = basename.replace("python-", "")
     basename = basename.replace("-python", "").lower()
