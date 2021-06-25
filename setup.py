@@ -31,7 +31,7 @@ __version__ = Version({version!r})
 
 setup(setup_requires=['setuptools-scm', 'setuptools>=38.6.0'],
       use_scm_version={
-          'write_to': 'src/_wheel2deb/version.py',
+          'write_to': 'src/_wheel2deb_simple/version.py',
           'write_to_template': version_template},
       package_dir={'': 'src'},
       install_requires=INSTALL_REQUIRES,

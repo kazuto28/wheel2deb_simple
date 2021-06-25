@@ -5,17 +5,17 @@ import time
 from pathlib import Path
 from logging import INFO, DEBUG
 from functools import partial
-from _wheel2deb import tools
-from _wheel2deb import logger as logging
-from _wheel2deb.context import load, Settings
-from _wheel2deb.pydist import Wheel
-from _wheel2deb.debian import SourcePackage
+from _wheel2deb_simple import tools
+from _wheel2deb_simple import logger as logging
+from _wheel2deb_simple.context import load, Settings
+from _wheel2deb_simple.pydist import Wheel
+from _wheel2deb_simple.debian import SourcePackage
 
 logger = logging.getLogger(__name__)
 
 tools.patch_pathlib()
 
-EXTRACT_PATH = Path("/tmp/wheel2deb")
+EXTRACT_PATH = Path("/tmp/wheel2deb_simple")
 
 
 def parse_args(argv):
